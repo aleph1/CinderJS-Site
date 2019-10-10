@@ -34,10 +34,25 @@
 					<rect x="39.152" fill="#9AAFE4" width="18" height="18"/>
 				</svg>
 			</div>
-			<nav>
+			<div>
 				<a href="" class="btn">Github</a>
 				<a href="" class="btn">Developed by Aleph1</a>
-			</nav>	
+			</div>
+			<nav>
+				<ul>
+					<li><a href="#" class="btn">Cinder.js</a></li>
+					<li><a href="#demo" class="btn">Demo</a></li>
+					<li><a href="#install" class="btn">Installation</a></li>
+					<li><a href="#docs" class="btn">Documentation</a>
+						<ul>
+							<li><a href="#config" class="btn">Configuration</a></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
 		</header>
 		<main>
 			<header class="narrow">
@@ -62,7 +77,7 @@
 					</div>
 				</div>
 			</header>
-			<section class="demo wide">
+			<section id="demo" class="wide">
 				<div>
 					<h3>Cinder.js Demo</h3>
 					<div class="row">
@@ -99,7 +114,7 @@
 						</div>
 						<div class="three purple">
 							<h4>Animation</h4>
-							<p>Cinder.js is designed to work well with CSS transitions. However, you can also use an external library to control animations for older browsers.</p>
+							<p>Cinder.js works best with CSS transitions. However, you can also use an external library to control animations for older browsers.</p>
 							<label for="cinder-animation">Type</label>
 							<select>
 								<option>CSS</option>
@@ -134,11 +149,40 @@
 					<p class="c">Images courtesy of the <a href="https://images.nasa.gov/">NASA Image and Video Library</a></p>
 				</div>
 			</section>
-			<section class="docs wide">
-				<div>
-					<h3>Cinder.js Documentation</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia blandit pellentesque. Nam felis sapien, viverra et metus et, interdum ullamcorper metus. Curabitur ut varius nulla. Suspendisse elit orci, aliquet at metus vitae, mattis consequat quam. Praesent imperdiet odio ipsum. Aenean sollicitudin sagittis lacus. Etiam metus mi, tempus in turpis et, pellentesque dictum metus. Donec id cursus mauris, sit amet faucibus lorem. Maecenas feugiat mattis diam, id malesuada turpis laoreet ut.</p>
-					<p>Aenean est elit, volutpat at bibendum id, vehicula a leo. Suspendisse potenti. Morbi blandit, lorem vel gravida gravida, dui metus vulputate purus, nec tristique arcu quam et magna. Nullam at vehicula velit. Etiam sit amet eros quis urna pharetra lobortis. Donec vel interdum lectus. Ut viverra magna non lobortis molestie. Nam a libero odio. Integer sed sodales justo. Vivamus quis molestie ante. Pellentesque cursus justo nec tempor tristique. Phasellus ac leo ut ante pretium ultrices at in augue. Nulla sed fringilla enim, sit amet ornare turpis. Praesent et neque id libero tempor venenatis. Morbi metus dolor, venenatis at elit a, aliquam feugiat ligula. Donec varius pharetra viverra.</p>
+			<section id="docs" class="wide">
+				<div class="narrow">
+					<section id="install">
+						<h3>Installation</h3>
+						<p>Cinder.js is available on <a href="">CloudFlare</a>, <a href="">jsDelivr</a> and <a href="">unpkg</a>, or you can download the JS to host yourself.</p>
+					</section>
+					<section id="install">
+						<h3>Versions</h3>
+						<p>The vanilla and jQuery/Cash plugin versions of Cinder.js are virtually identically. However, the latter version is slightly smaller due to being able to use those libraries existing methods. The jQuery/Cash plugin also allows instantiation through the function chain <code>.Cinder()</code>.</p>
+					</section>
+					<section id="config">
+						<h3>Configuration</h3>
+						<dl>
+							<dt>filter</dt>
+							<dd><b>string:</b> selector that is compared against items using Element.matches() or jQuery’s filter method. Items that don’t match will have the class <code>cinder-filter</code> added.</dd>
+							<dd><b>function:</b> the function will be called for each item with two parameters, HTMLElement and index. If the function returns a false-like value the item will have the class <code>cinder-filter</code> added.</dd>
+							<dt>animation</dt>
+							<dd><b>default:</b> Cinder.js is intended to play well with CSS transforms. If you plan on using CSS transforms you can specify them in an external stylesheet using the selector <code>.cinder-active>*</code>.</dd>
+							<dd><b>function:</b> For older browsers that don’t support CSS transforms Cinder.js also allows for animation that is applied on a frame-by-frame basis. The function will be passed…</dd>
+							<dt>onFirstLayout</dt>
+							<dd></dd>
+							<dt>onLayout</dt>
+							<dd></dd>
+							<dt>layout</dt>
+							<dd></dd>
+							<dt>resize</dt>
+							<dd></dd>
+						</dl>
+					</section>
+					<section id="config">
+						<h3>Layout Algorithms</h3>
+						<h4>Masonry</h4>
+						<p>Lorem ipsum dolor nabet…</p>
+					</section>
 				</div>
 			</section>
 		</main>

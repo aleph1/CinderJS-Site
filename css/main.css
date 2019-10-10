@@ -67,16 +67,31 @@ line-height: 24px;
 -webkit-text-size-adjust: 100%;
 }
 
-#app
-{
-width: 80%;
-margin: 0 10%;
-}
-
 #app>header
 {
 margin: 4em 0;
 text-align: center;
+}
+
+nav ul
+{
+list-style-type: none;
+margin: 0;
+padding: 0;
+}
+
+nav a.btn
+{
+padding: 0.25em 0.625em;
+display: block;
+text-decoration: none;
+text-align: left;
+background: #000;
+}
+
+nav li li a.btn
+{
+padding-left: 1.25em;
 }
 
 .logo
@@ -199,7 +214,7 @@ a.btn:hover
 text-shadow: 1px 1px 1px rgba( 0, 0, 0, 0.25 );
 }
 
-main section
+main>section
 {
 padding: 4em 0;
 }
@@ -209,26 +224,49 @@ main header
 padding: 0 0 4em;
 }
 
-section.wide
-{
-width: 100vw;
-position: relative;
-left: 50%;
-margin-left: -50vw;
-}
-
-section.demo
+#demo
 {
 background: #000;
 }
 
-section.docs
+#docs
 {
 background: #FFF;
 color: #333;
 }
 
+dt
+{
+font-weight: bold;
+}
+
 @media only screen and (min-width: 801px) {
+
+	#app
+	{
+	width: 70vw;
+	margin: 0 5vw 0 25vw;
+	}
+
+	nav
+	{
+	width: 20%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: #000;
+	height: 100vh;
+	overflow-y: scroll;
+	z-index: 10000;
+	}
+
+	section.wide
+	{
+	width: 80vw;
+	position: relative;
+	left: 50%;
+	margin-left: -40vw;
+	}
 
 	section.wide>div,
 	.narrow
