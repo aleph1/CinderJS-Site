@@ -1,0 +1,149 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Cinder.js</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="manifest" href="site.webmanifest">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<div id="app">
+		<header>
+			<div class="logo">
+				<svg width="100%" height="100%" viewBox="0 0 213.768 57.152" preserveAspectRatio="xMidYMid meet">
+					<rect x="19.576" y="19.576" fill="#F2ACC9" width="18" height="18"/>
+					<rect x="19.576" y="39.152" fill="#F2ACC9" width="18" height="18"/>
+					<rect y="19.575" fill="#F2ACC9" width="18" height="37.576"/>
+					<rect x="195.768" y="19.576" fill="#90E2DC" width="18" height="18"/>
+					<rect x="195.768" y="39.152" fill="#555555" width="18" height="18"/>
+					<rect x="176.19" y="19.575" fill="#90E2DC" width="18" height="37.576"/>
+					<rect fill="#555555" width="37.576" height="18"/>
+					<rect x="58.729" y="19.575" fill="#BB98F6" width="18" height="37.576"/>
+					<rect x="78.306" y="19.575" fill="#BB98F6" width="18" height="37.576"/>
+					<rect x="58.729" fill="#555555" width="37.576" height="18"/>
+					<rect x="137.036" y="39.152" fill="#E1B79E" width="37.576" height="18"/>
+					<rect x="137.036" y="19.575" fill="#E1B79E" width="37.576" height="18"/>
+					<rect x="137.036" fill="#555555" width="37.577" height="18"/>
+					<rect x="176.189" fill="#555555" width="37.577" height="18"/>
+					<rect x="97.882" y="19.575" fill="#C3D38C" width="18" height="37.576"/>
+					<rect x="117.459" fill="#C3D38C" width="18" height="57.15"/>
+					<rect x="97.882" fill="#555555" width="18" height="18"/>
+					<rect x="39.152" y="19.575" fill="#9AAFE4" width="18" height="37.576"/>
+					<rect x="39.152" fill="#9AAFE4" width="18" height="18"/>
+				</svg>
+			</div>
+			<nav>
+				<a href="" class="btn">Github</a>
+				<a href="" class="btn">Developed by Aleph1</a>
+			</nav>	
+		</header>
+		<main>
+			<header class="narrow">
+				<div>
+					<h1>Cinder.js is a Lightweight <em>&amp;</em> Extensible Layout Library</h1>
+					<h2>With its cruft-free mix of speed and pixel perfection, Cinder.js ensures your blocks remain beautiful, always.</h2>
+					<p>Cinder.js supports multiple layout algorithms, including masonry, and developers can easily define their own. The library is available in vanilla JS and as a <a href="https://jquery.com/">jQuery</a> plugin that is also compatible with <a href="https://kenwheeler.github.io/cash/">cash</a>. Both versions are under 2KB when minified and gzipped.</p>
+					<h3>Browser Support</h3>
+					<ul class="three">
+						<li>Chrome 34+</li>
+						<li>Safari 7+</li>
+						<li>Firefox 28+</li>
+						<li>IE9+</li>
+						<li>Opera 23+</li>
+						<li>IOS Safari 7+</li>
+						<li>Android Chrome 34+</li>
+						<li>Android Browser 4+</li>
+					</ul>
+					<div class="c">
+						<a href="js/cinder.min.js" class="btn">Download v0.4.1<br>vanilla JS</a>
+						<a href="js/cinder.jquery.min.js" class="btn">Download v0.4.1<br>for jQuery/Cash</a>
+					</div>
+				</div>
+			</header>
+			<section class="demo wide">
+				<div>
+					<h3>Cinder.js Demo</h3>
+					<div class="row">
+						<div class="three pink">
+							<h4>Content</h4>
+							<p>Cinder.js works with fixed ratio content like images, dynamic content like text, or a combination of the two.</p>
+							<label for="cinder-animation">Type</label>
+							<select>
+								<option>Images</option>
+								<option>Text</option>
+								<option>Both</option>
+							</select>
+						</div>
+						<div class="three lilac">
+							<h4>Layout</h4>
+							<p>Cinder.js includes a number of algorithms, and it is easy for developers to define their own.</p>
+							<div>
+								<label for="cinder-animation">Type</label>
+								<select>
+									<option>Masonry</option>
+									<option>Equal height rows</option>
+									<option>Trans</option>
+								</select>
+							</div>
+							<div>
+								<label for="cinder-columns">Columns</label>
+								<select>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="4">5</option>
+								</select>
+							</div>
+						</div>
+						<div class="three purple">
+							<h4>Animation</h4>
+							<p>Cinder.js is designed to work well with CSS transitions. However, you can also use an external library to control animations for older browsers.</p>
+							<label for="cinder-animation">Type</label>
+							<select>
+								<option>CSS</option>
+								<option>None</option>
+								<option>Trans</option>
+							</select>
+						</div>
+					</div>
+					<div class="cinder">
+						<img src="img/1.jpg" data-cinder-ratio="1.2"/>
+						<img src="img/2.jpg" data-cinder-ratio="1"/>
+						<img src="img/3.jpg" data-cinder-ratio="1.2"/>
+						<img src="img/4.jpg" data-cinder-ratio="1"/>
+						<img src="img/5.jpg" data-cinder-ratio="1.2"/>
+						<img src="img/6.jpg" data-cinder-ratio="1"/>
+						<img src="img/7.jpg" data-cinder-ratio="0.714"/>
+						<img src="img/1.jpg" data-cinder-ratio="1.2"/>
+						<img src="img/2.jpg" data-cinder-ratio="1"/>
+						<img src="img/3.jpg" data-cinder-ratio="1.2"/>
+						<img src="img/4.jpg" data-cinder-ratio="1"/>
+						<img src="img/5.jpg" data-cinder-ratio="1.2"/>
+						<img src="img/6.jpg" data-cinder-ratio="1"/>
+						<img src="img/7.jpg" data-cinder-ratio="0.714"/>
+						<img src="img/1.jpg" data-cinder-ratio="1.2"/>
+						<img src="img/2.jpg" data-cinder-ratio="1"/>
+						<img src="img/3.jpg" data-cinder-ratio="1.2"/>
+						<img src="img/4.jpg" data-cinder-ratio="1"/>
+						<img src="img/5.jpg" data-cinder-ratio="1.2"/>
+						<img src="img/6.jpg" data-cinder-ratio="1"/>
+						<img src="img/7.jpg" data-cinder-ratio="0.714"/>
+					</div>
+					<p class="c">Images courtesy of the <a href="https://images.nasa.gov/">NASA Image and Video Library</a></p>
+				</div>
+			</section>
+			<section class="docs wide">
+				<div>
+					<h3>Cinder.js Documentation</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia blandit pellentesque. Nam felis sapien, viverra et metus et, interdum ullamcorper metus. Curabitur ut varius nulla. Suspendisse elit orci, aliquet at metus vitae, mattis consequat quam. Praesent imperdiet odio ipsum. Aenean sollicitudin sagittis lacus. Etiam metus mi, tempus in turpis et, pellentesque dictum metus. Donec id cursus mauris, sit amet faucibus lorem. Maecenas feugiat mattis diam, id malesuada turpis laoreet ut.</p>
+					<p>Aenean est elit, volutpat at bibendum id, vehicula a leo. Suspendisse potenti. Morbi blandit, lorem vel gravida gravida, dui metus vulputate purus, nec tristique arcu quam et magna. Nullam at vehicula velit. Etiam sit amet eros quis urna pharetra lobortis. Donec vel interdum lectus. Ut viverra magna non lobortis molestie. Nam a libero odio. Integer sed sodales justo. Vivamus quis molestie ante. Pellentesque cursus justo nec tempor tristique. Phasellus ac leo ut ante pretium ultrices at in augue. Nulla sed fringilla enim, sit amet ornare turpis. Praesent et neque id libero tempor venenatis. Morbi metus dolor, venenatis at elit a, aliquam feugiat ligula. Donec varius pharetra viverra.</p>
+				</div>
+			</section>
+		</main>
+	</div>
+	<script src="js/cinder.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
