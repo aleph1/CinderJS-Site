@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Cinder.js</title>
-	<meta name="description" content="">
+	<meta name="description" content="Cinder.js is a lightweight and extensible layout library.">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="manifest" href="site.webmanifest">
 	<link rel="stylesheet" href="css/main.css">
@@ -161,33 +161,47 @@
 					</section>
 					<section id="config">
 						<h3>Configuration</h3>
+						<p>Using Cinder.js is as easy as calling the following:</p>
+						<pre><code class="long">var element = document.getElementsByClassName( 'cinder' );<br>Cinder( element );</code></pre>
+						<p>However, you are likely to want more control than that. You can also pass in options to utlize different layout algorithms or to support animation in older browsers that don’t support CSS transforms:</p>
+						<pre><code class="long">var element = document.getElementsByClassName( 'cinder' );<br>Cinder( element, {<br>  animation: function( start, end, now, ratio ){<br>    now.w = start.w + end.w * ;<br>    now.h = start.h + end.h * ;<br>  },</br>  test: test,</br>} );</code></pre>
 						<dl>
-							<dt>filter</dt>
-							<dd><b>string:</b> selector that is compared against items using Element.matches() or jQuery’s filter method. Items that don’t match will have the class <code>cinder-filter</code> added.</dd>
-							<dd><b>function:</b> the function will be called for each item with two parameters, HTMLElement and index. If the function returns a false-like value the item will have the class <code>cinder-filter</code> added.</dd>
-							<dt>animation</dt>
-							<dd><b>default:</b> Cinder.js is intended to play well with CSS transforms. If you plan on using CSS transforms you can specify them in an external stylesheet using the selector <code>.cinder-active>*</code>.</dd>
-							<dd><b>function:</b> For older browsers that don’t support CSS transforms Cinder.js also allows for animation that is applied on a frame-by-frame basis. The function will be passed…</dd>
-							<dt>onFirstLayout</dt>
-							<dd></dd>
-							<dt>onLayout</dt>
-							<dd></dd>
-							<dt>layout</dt>
-							<dd></dd>
-							<dt>resize</dt>
-							<dd></dd>
+							<dt id="cinder-option-filter">filter</dt>
+							<dd><code>string (default: *)</code> — selector that is compared against items using <code>Element.matches()</code> or jQuery’s <code>.filter()</code> method. Items that don’t match will have the class <code>cinder-filter</code> added.</dd>
+							<dd><code>function( HTMLElement, index )</code> — the function will be called for each item. If the function returns a false-like value the item will have the class <code>cinder-filter</code> added.</dd>
+							<dt id="cinder-option-animation">animation</dt>
+							<dd><b>default: null</b> Cinder.js is intended to play well with CSS transforms. If you plan on using CSS transforms you can specify them in an external stylesheet using the selector <code>.cinder-active>*</code>.</dd>
+							<dd><b>function ()</b> For older browsers that don’t support CSS transforms Cinder.js also allows for animation that is applied on a frame-by-frame basis. The function will be passed…</dd>
+							<dt id="cinder-option-duration">duration</dt>
+							<dd><code>integer (default: 1000)</code> — Animation duration in milliseconds, only used if <a href="#cinder-option-animation">animation</a> is a function.</dd>
+							<dt id="cinder-option-onfirstlayout">onFirstLayout</dt>
+							<dd><code>function( CinderInstance )</code> — Lorem ipsum…</dd>
+							<dt id="cinder-option-onlayout">onLayout</dt>
+							<dd><code>function( CinderInstance )</code> — Lorem ipsum…</dd>
+							<dt id="cinder-option-layout">layout</dt>
+							<dd><code>object</code> — Lorem ipsum…</dd>
 						</dl>
 					</section>
 					<section id="config">
 						<h3>Layout Algorithms</h3>
 						<h4>Masonry</h4>
 						<p>Lorem ipsum dolor nabet…</p>
+						<dl>
+							<dt>columns</dt>
+							<dd><code>integer</code> — The number of columns.</dd>
+							<dd><code>string</code> — The maximum width of the column in the form <code>#px</code>, for example, <code>100px</code>.</dd>
+							<dt>gap</dt>
+							<dd><code>integer</code> — The amount of space bewteen columns in pixels.</dd>
+							<dt>resize</dt>
+							<dd><code>boolean (default: true)</code> — The amount of space bewteen columns in pixels.</dd>
+						</dl>
 					</section>
 				</div>
 			</section>
 		</main>
 	</div>
 	<script src="js/cinder.js"></script>
+	<script src="js/rainbow.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>

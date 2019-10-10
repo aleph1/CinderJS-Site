@@ -20,6 +20,18 @@ function on( elements, events ){
 	}
 }
 
+function off( elements, events ){
+	if( !elements.length ) elements = [ elements ];
+	for( var i = 0; i < elements.length; i++ )
+	{
+		var element = elements[ i ];
+		for( var prop in events )
+		{
+			element.removeEventListener( prop, events[ prop ] );
+		}
+	}
+}
+
 // get multiple attributes from elements
 function getAttributes( element, attributes )
 {
@@ -32,25 +44,61 @@ function getAttributes( element, attributes )
 	return output;
 }
 
+function shallowCopy( to, from )
+{
+	for( var prop in from )
+	{
+		to[ prop ] = from[ prop ];
+	}
+	return to;
+}
+
 // ------------------------------
 // LOGO ANIMATION
 // ------------------------------
 
 var rects = document.getElementsByTagName( 'rect' ),
-	rectDimensions = [],
-	rectAttributes = 'x,y,width,height'.split( ',' );
+	rectInfo = [],
+	rectAttributes = 'x,y,width,height,fill'.split( ',' ),
+	logo = document.getElementsByTagName( 'svg' );
 
 for( var i = 0; i < rects.length; i++ )
 {	
-	rectDimensions[ i ] = getAttributes( rects[ i ], rectAttributes );
+	rectInfo[ i ] = getAttributes( rects[ i ], rectAttributes );
 }
 
-on( document.getElementsByTagName( 'svg' ), {
-	mouseover: function( e )
+function rearrangeLogo()
+{
+	console.log( 'rearrangeLogo' );
+
+	var tempInfo = [];
+	//var tempRects = rects.slice();
+
+	// copy the rectDimensions array
+	for( var i = 0; i < rectInfo.length; i++ )
 	{
-		console.log( 'logo mouseover' );
-		//for( var i = 0; i)
+		tempInfo[ i ] = shallowCopy( {}, rectInfo[ i ] );
 	}
+	
+	//while( tempInfo.length )
+	//{
+	//	var rectProps = tempInfo[ Math.floor( Math.random() * tempInfo.length ) ];
+//
+	//}
+
+	off( logo, {
+		mouseover: rearrangeLogo
+	} )
+
+	setTimeout( function(){
+		on( logo, {
+			mouseover: rearrangeLogo
+		} );
+	}, 1000 );
+}
+
+on( logo, {
+	mouseover: rearrangeLogo
 } );
 
 // ------------------------------
